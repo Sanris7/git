@@ -1,0 +1,124 @@
+### **1. Git Configuration Commands**
+- `git config --global user.name "Your Name"`: Set the global username for commits.
+- `git config --global user.email "you@example.com"`: Set the global email for commits.
+- `git config --global core.editor "code --wait"`: Set the default editor for Git.
+- `git config --list`: List all the configured settings.
+
+### **2. Basic Git Commands**
+- `git init`: Initialize a new Git repository.
+- `git clone <repo-url>`: Clone an existing repository.
+- `git status`: Show the working directory status.
+- `git add <file>`: Add a file to the staging area.
+- `git add .`: Add all files in the current directory to the staging area.
+- `git commit -m "commit message"`: Commit changes with a message.
+- `git commit -a -m "commit message"`: Add and commit all tracked files with a message.
+- `git log`: Show the commit history.
+- `git log --oneline`: Show the commit history in a compact format.
+- `git log --graph --decorate --all`: Show a graph view of the commit history.
+- `git show <commit-hash>`: Show changes in a specific commit.
+
+### **3. Branching and Merging**
+- `git branch`: List all branches.
+- `git branch <branch-name>`: Create a new branch.
+- `git checkout <branch-name>`: Switch to another branch.
+- `git checkout -b <branch-name>`: Create and switch to a new branch.
+- `git merge <branch-name>`: Merge the specified branch into the current branch.
+- `git branch -d <branch-name>`: Delete a branch.
+- `git branch -D <branch-name>`: Force delete a branch.
+
+### **4. Remote Repositories**
+- `git remote -v`: Show all configured remote repositories.
+- `git remote add <name> <url>`: Add a new remote repository.
+- `git fetch <remote>`: Fetch changes from a remote repository.
+- `git pull <remote> <branch>`: Fetch and merge changes from a remote branch.
+- `git push <remote> <branch>`: Push local changes to a remote branch.
+- `git push -u <remote> <branch>`: Push and set the upstream branch.
+
+### **5. Stashing and Cleaning**
+- `git stash`: Stash the current changes for later use.
+- `git stash list`: List all stashed changes.
+- `git stash apply`: Apply the latest stashed changes.
+- `git stash apply stash@{2}`: Apply a specific stash.
+- `git stash drop stash@{2}`: Remove a specific stash.
+- `git stash clear`: Remove all stashes.
+- `git clean -f`: Remove untracked files from the working directory.
+- `git clean -fd`: Remove untracked files and directories.
+
+### **6. Undoing Changes**
+- `git reset <file>`: Unstage a file.
+- `git reset --hard`: Reset the working directory to the last commit.
+- `git reset --hard <commit-hash>`: Reset the working directory and index to a specific commit.
+- `git revert <commit-hash>`: Revert a specific commit by creating a new one.
+- `git checkout -- <file>`: Discard changes in the working directory.
+
+### **7. Tagging**
+- `git tag`: List all tags.
+- `git tag <tag-name>`: Create a new tag.
+- `git tag -a <tag-name> -m "message"`: Create an annotated tag with a message.
+- `git tag -d <tag-name>`: Delete a tag.
+- `git push <remote> <tag-name>`: Push a specific tag to a remote.
+- `git push --tags`: Push all tags to a remote.
+
+### **8. Git Diff and Patching**
+- `git diff`: Show differences between working directory and index.
+- `git diff --staged`: Show differences between index and last commit.
+- `git diff <branch1> <branch2>`: Show differences between two branches.
+- `git apply <patch-file>`: Apply a patch to the working directory.
+
+### **9. Git Rebase and Cherry-Pick**
+- `git rebase <branch>`: Rebase the current branch onto another branch.
+- `git rebase --continue`: Continue the rebase after resolving conflicts.
+- `git rebase --abort`: Abort the rebase and return to the previous state.
+- `git cherry-pick <commit-hash>`: Apply the changes from a specific commit.
+
+### **10. Git Bisect**
+- `git bisect start`: Start the bisect process.
+- `git bisect good <commit>`: Mark a known good commit.
+- `git bisect bad <commit>`: Mark a known bad commit.
+- `git bisect reset`: End the bisect process.
+
+### **11. Git Submodules**
+- `git submodule add <url> <path>`: Add a submodule to the repository.
+- `git submodule update --init`: Initialize and update submodules.
+- `git submodule foreach <command>`: Run a command in all submodules.
+
+### **12. Git Blame and Annotate**
+- `git blame <file>`: Show who made changes to each line of a file.
+- `git annotate <file>`: Alias for `git blame`.
+
+### **13. Git Hooks**
+- `git hook <hook-name>`: Create or manage Git hooks.
+- `git hook list`: List available hooks.
+
+### **14. Git Archive**
+- `git archive --format=zip HEAD > archive.zip`: Create a zip archive of the current repository.
+- `git archive --format=tar HEAD > archive.tar`: Create a tar archive of the current repository.
+
+### **15. Git Aliases**
+- `git config --global alias.st status`: Create an alias for the `git status` command.
+- `git config --global alias.co checkout`: Create an alias for the `git checkout` command.
+
+### **16. Git Flow**
+- `git flow init`: Initialize a git flow repository.
+- `git flow feature start <name>`: Start a new feature.
+- `git flow feature finish <name>`: Finish a feature.
+
+### **17. Git LFS (Large File Support)**
+- `git lfs install`: Install Git LFS.
+- `git lfs track "*.psd"`: Track a specific file type.
+- `git lfs ls-files`: List all LFS-tracked files.
+
+### **18. Git GUI Tools**
+- `git gui`: Launch the Git GUI application.
+- `gitk`: Launch the Git history visualizer.
+
+### **19. Git Maintenance Commands**
+- `git gc`: Run garbage collection to clean up unnecessary files and optimize the repository.
+- `git fsck`: Check the integrity of the Git file system.
+- `git prune`: Remove unreachable objects from the repository.
+
+This is a broad overview of most Git commands you might use. For detailed usage and options for each command, you can refer to the Git documentation by running:
+
+```bash
+git help <command>
+```
